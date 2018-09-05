@@ -6,7 +6,7 @@ from Tkinter import *
 
 def start():
     from PIL import Image
-    img = Image.open(<path to image>)
+    img = Image.open(<image directory>)
     greyscale = [
                 " ",
                 " ",
@@ -38,14 +38,14 @@ def start():
     text.insert(END, str)
 
 master = Tk()
-master.geometry("1500x1000")
+master.geometry("1000x800")
 master.grid_columnconfigure(0, weight=1)
 
 text = Text(master, width=160, height=75)
 text.config(font=("Consolas", 7))
-text.pack(padx=0, pady=0)
+text.pack(padx=2, pady=2)
 
 b = Button(master, text="Start", command=start)
-b.pack(padx=0, pady=0)
+b.pack(padx=0, pady=2)
 
 mainloop()
